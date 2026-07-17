@@ -1,1 +1,3 @@
-# social_media_backend_project
+# Social Media Backend Project
+
+A simple backend starter project for a social media application.
