@@ -2,6 +2,7 @@
   "name": "social_media_backend_project",
   "version": "1.0.0",
   "description": "This backend project for social media website",
+  "private": true,
   "keywords": [
     "Shreyas",
     "Chai",
