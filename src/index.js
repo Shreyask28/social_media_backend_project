@@ -1,14 +1,28 @@
 import dotenv from "dotenv";
 import connectDb from "./db/index.js";
+import app from "./app.js";
 
 dotenv.config({
     path: "./.env"
 });
 
-connectDb();
 
+const port = process.env.PORT || 8000;
 
+const startServer = async () => {
+    try {
+        await connectDb();
 
+        app.listen(port, () => {
+            console.log(`server is serving on http://localhost:${port}`);
+        });
+    } catch (error) {
+        console.error("Error while starting server:", error);
+        process.exit(1);
+    }
+};
+
+startServer();
 
 
 
@@ -52,4 +66,5 @@ const app =express();
     // error due to mongo db
 
 })()
-    */
+
+*/
